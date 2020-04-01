@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<unity:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:unity="http://prismlibrary.com"
+                        x:Class="WeatherApp.App">
+    <Application.Resources>
+        <x:String x:Key="FormatDegrees">{0:0°C}</x:String>
+        <x:String x:Key="FormatPercent">{0:0%}</x:String>
+    </Application.Resources>
+</unity:PrismApplication>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:iOsSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:automationIds="clr-namespace:WeatherApp.Views.AutomationIds"
+             iOsSpecific:Page.UseSafeArea="true"
+             x:Class="WeatherApp.Views.CurrentWeatherPage"
+             Title="CurrentWeatherPage">
+
+    <Grid
+        Padding="10,10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+            FontSize="Large" HorizontalTextAlignment="Center"
+            Text="{Binding WeatherData.City}"
+            AutomationId="{x:Static automationIds:AutomationIds.CurrentWeatherLocationDataLabel}" />
+
+        <Label
+            Grid.Row="1" Grid.Column="0"
+            Text="Current Temperature:"/>
+        <Label
+            Grid.Row="1" Grid.Column="1"
+            Text="{Binding WeatherData.CurrentTemperature, StringFormat={StaticResource FormatDegrees}}"
+            AutomationId="{x:Static automationIds:AutomationIds.CurrentWeatherCurrentTemperatureDataLabel}" />
+
+        <Label
+            Grid.Row="2" Grid.Column="0"
+            Text="Min Temperature:" />
+        <Label
+            Grid.Row="2" Grid.Column="1"
+            Text="{Binding WeatherData.MinTemperature, StringFormat={StaticResource FormatDegrees}}"
+            AutomationId="{x:Static automationIds:AutomationIds.CurrentWeatherMinTemperatureDataLabel}" />
+
+        <Label
+            Grid.Row="3" Grid.Column="0"
+            Text="Max Temperature:" />
+        <Label
+            Grid.Row="3" Grid.Column="1"
+            Text="{Binding WeatherData.MaxTemperature, StringFormat={StaticResource FormatDegrees}}"
+            AutomationId="{x:Static automationIds:AutomationIds.CurrentWeatherMaxTemperatureDataLabel}" />
+
+        <Label
+            Grid.Row="4" Grid.Column="0"
+            Text="Humidity:" />
+        <Label
+            Grid.Row="4" Grid.Column="1"
+            Text="{Binding WeatherData.Humidity, StringFormat={StaticResource FormatPercent}}"
+            AutomationId="{x:Static automationIds:AutomationIds.CurrentWeatherHumidityDataLabel}" />
+    </Grid>
+    
+</ContentPage>
