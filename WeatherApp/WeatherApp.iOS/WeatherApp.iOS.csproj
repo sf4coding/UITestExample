@@ -116,4 +116,9 @@
       <Folder Include="Assets.xcassets\Gps.imageset\" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+    
+    <Target Name="CopyIpa" AfterTargets="Build"
+            Condition="'$(Configuration)|$(Platform)' == 'UITest|iPhoneSimulator'" >
+        <Exec Command="cp -R $(ProjectDir)$(DeviceSpecificOutputPath)$(AssemblyFile) $(ProjectDir)$(OutputPath)$(AssemblyFile)" />
+    </Target>
 </Project>

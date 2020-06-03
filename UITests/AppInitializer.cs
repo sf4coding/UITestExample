@@ -36,7 +36,7 @@ namespace UITests
                 case Platform.iOS:
                 {
                     var appFileEnd =
-                        $"WeatherApp{DirSep}WeatherApp.iOS{DirSep}bin{DirSep}UITest{DirSep}device-builds{DirSep}iphone10.5-13.3{DirSep}WeatherApp.iOS.app";
+                        $"WeatherApp{DirSep}WeatherApp.iOS{DirSep}bin{DirSep}UITest{DirSep}WeatherApp.iOS.app";
                     var appFile = GetApplicationFile(appFileEnd);
 
                     return ConfigureApp.iOS.EnableLocalScreenshots().AppBundle(appFile).StartApp();
