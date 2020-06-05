@@ -1,18 +1,18 @@
 using System;
 using System.Linq;
-using WeatherApp.Views.AutomationIds;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
+using static TestIds.TestIds;
 
 namespace UITests.PageObjects
 {
     public class CurrentWeatherPageObject : BaseWeatherAppPageObject
     {
-        private readonly Func<AppQuery, AppQuery> _locationData = x => x.Marked(AutomationIds.CurrentWeatherLocationDataLabel);
-        private readonly Func<AppQuery, AppQuery> _currentTemperatureData = x => x.Marked(AutomationIds.CurrentWeatherCurrentTemperatureDataLabel);
-        private readonly Func<AppQuery, AppQuery> _maxTemperatureData = x => x.Marked(AutomationIds.CurrentWeatherMaxTemperatureDataLabel);
-        private readonly Func<AppQuery, AppQuery> _minTemperatureData = x => x.Marked(AutomationIds.CurrentWeatherMinTemperatureDataLabel);
-        private readonly Func<AppQuery, AppQuery> _humidityData = x => x.Marked(AutomationIds.CurrentWeatherHumidityDataLabel);
+        private readonly Func<AppQuery, AppQuery> _locationData = x => x.Marked(CurrentWeatherLocationDataLabel);
+        private readonly Func<AppQuery, AppQuery> _currentTemperatureData = x => x.Marked(CurrentWeatherCurrentTemperatureDataLabel);
+        private readonly Func<AppQuery, AppQuery> _maxTemperatureData = x => x.Marked(CurrentWeatherMaxTemperatureDataLabel);
+        private readonly Func<AppQuery, AppQuery> _minTemperatureData = x => x.Marked(CurrentWeatherMinTemperatureDataLabel);
+        private readonly Func<AppQuery, AppQuery> _humidityData = x => x.Marked(CurrentWeatherHumidityDataLabel);
         
         public CurrentWeatherPageObject(IApp app) : base(app)
         {

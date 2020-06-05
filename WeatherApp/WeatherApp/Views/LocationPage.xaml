@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:iOsSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             xmlns:automationIds="clr-namespace:WeatherApp.Views.AutomationIds"
+             xmlns:testIds="clr-namespace:TestIds;assembly=TestIds"
              iOsSpecific:Page.UseSafeArea="true"
              x:Class="WeatherApp.Views.LocationPage"
              Title="LocationPage">
@@ -16,7 +16,7 @@
             AbsoluteLayout.LayoutBounds="0.5, 0.5, 50, 50"
             Color="Blue" 
             IsRunning="{Binding IsLoadingWeatherData}"
-            AutomationId="{x:Static automationIds:AutomationIds.LocationLoadingCircle}" />
+            AutomationId="{x:Static testIds:TestIds.LocationLoadingCircle}" />
 
         <Grid
             AbsoluteLayout.LayoutFlags="All"
@@ -32,13 +32,13 @@
                    Text="Please enter your location:" />
             <Entry Grid.Row="1"
                    Text="{Binding Location}"
-                   AutomationId="{x:Static automationIds:AutomationIds.LocationLocationEntry}" />
+                   AutomationId="{x:Static testIds:TestIds.LocationLocationEntry}" />
 
             <Button Grid.Row="2"
                     Text="Search"
                     Command="{Binding LoadWeatherDataCommand}"
                     IsEnabled="{Binding IsLocationEntered}"
-                    AutomationId="{x:Static automationIds:AutomationIds.LocationSearchButton}" />
+                    AutomationId="{x:Static testIds:TestIds.LocationSearchButton}" />
         </Grid>
         
     </AbsoluteLayout>

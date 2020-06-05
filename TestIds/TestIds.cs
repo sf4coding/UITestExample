@@ -1,6 +1,6 @@
-namespace WeatherApp.Views.AutomationIds
+﻿namespace TestIds
 {
-    public static class AutomationIds
+    public static class TestIds
     {
         /* Tabs */
         public const string LocationTab = "location_tab";

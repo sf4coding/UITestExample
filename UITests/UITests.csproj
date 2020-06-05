@@ -29,7 +29,7 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="NUnit" Version="2.6.4" />
-        <PackageReference Include="Xamarin.UITest" Version="3.0.6" />
+        <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AppInitializer.cs" />
@@ -41,6 +41,10 @@
         <Compile Include="Tests\Tests.cs" />
     </ItemGroup>
     <ItemGroup>
+      <ProjectReference Include="..\TestIds\TestIds.csproj">
+        <Project>{9fe8ba2a-1130-41e9-9ded-9046bbcd6dce}</Project>
+        <Name>TestIds</Name>
+      </ProjectReference>
       <ProjectReference Include="..\WeatherApp\WeatherApp\WeatherApp.csproj">
         <Project>{5effc844-82fc-420f-b1e0-f411a608abd2}</Project>
         <Name>WeatherApp</Name>
