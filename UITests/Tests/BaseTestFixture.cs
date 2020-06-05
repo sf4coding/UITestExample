@@ -38,7 +38,7 @@ namespace UITests.Tests
         private string CreateDestPath()
         {
             var basePath = AppDomain.CurrentDomain.BaseDirectory;
-            if (AppInitializer.Ide == Ide.VisualStudio)
+            if (AppInitializer.IDE == IDE.VisualStudio)
             {
                 basePath = Environment.CurrentDirectory;
             }

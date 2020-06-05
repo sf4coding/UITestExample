@@ -1,13 +1,12 @@
-using System;
 using Xamarin.UITest;
-using Xamarin.UITest.Queries;
+using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 namespace UITests.PageObjects
 {
     public class BaseWeatherAppPageObject : BasePageObject
     {
-        private readonly Func<AppQuery, AppQuery> _locationTab = x => x.Marked("Location");
-        private readonly Func<AppQuery, AppQuery> _currentWeatherTab = x => x.Marked("Now");
+        private readonly Query _locationTab = x => x.Marked("Location");
+        private readonly Query _currentWeatherTab = x => x.Marked("Now");
         
         public BaseWeatherAppPageObject(IApp app) : base(app)
         {

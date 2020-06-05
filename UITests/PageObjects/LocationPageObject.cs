@@ -1,18 +1,18 @@
-using System;
 using System.Linq;
 using Xamarin.UITest;
-using Xamarin.UITest.Queries;
 using static TestIds.TestIds;
+
+using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 namespace UITests.PageObjects
 {
     public class LocationPageObject : BaseWeatherAppPageObject
     {
-        private readonly Func<AppQuery, AppQuery> _locationEntry = x => x.Marked(LocationLocationEntry);
-        private readonly Func<AppQuery, AppQuery> _locationSearchButton = x => x.Marked(LocationSearchButton);
-        private readonly Func<AppQuery, AppQuery> _locationLoadingCircle = x => x.Marked(LocationLoadingCircle);
-        private readonly Func<AppQuery, AppQuery> _dialogText = x => x.Text("This city does not exist.");
-        private readonly Func<AppQuery, AppQuery> _dialogButton = x => x.Text("OK");
+        private readonly Query _locationEntry = x => x.Marked(LocationLocationEntry);
+        private readonly Query _locationSearchButton = x => x.Marked(LocationSearchButton);
+        private readonly Query _locationLoadingCircle = x => x.Marked(LocationLoadingCircle);
+        private readonly Query _dialogText = x => x.Text("This city does not exist.");
+        private readonly Query _dialogButton = x => x.Text("OK");
 
         public LocationPageObject(IApp app) : base(app)
         {

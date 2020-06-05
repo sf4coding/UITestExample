@@ -1,11 +1,10 @@
 ﻿using System;
 using System.IO;
 using Xamarin.UITest;
-using Xamarin.UITest.Queries;
 
 namespace UITests
 {
-    public enum Ide
+    public enum IDE
     {
         Rider,
         VisualStudio
@@ -15,14 +14,10 @@ namespace UITests
     {
         private static readonly char DirSep = Path.DirectorySeparatorChar;
 
-        public static Platform Platform { get; private set; }
-        
-        public static Ide Ide { get; private set; }
+        public static IDE IDE { get; private set; }
 
         public static IApp StartApp(Platform platform)
         {
-            Platform = platform;
-
             switch (platform)
             {
                 case Platform.Android:
@@ -52,13 +47,13 @@ namespace UITests
             var basePathVisualStudio = Environment.CurrentDirectory;
 
             var file = Path.Combine(basePathRider, $"..{DirSep}..{DirSep}..", fileEnd);
-            Ide = Ide.Rider;
+            IDE = IDE.Rider;
 
-            // apk is a file, app is a directory
+            // apk is a file -- app is a directory
             if (!File.Exists(file) && !Directory.Exists(file))
             {
                 file = Path.Combine(basePathVisualStudio, $"..{DirSep}..{DirSep}..", fileEnd);
-                Ide = Ide.VisualStudio;
+                IDE = IDE.VisualStudio;
             }
 
             return file;
