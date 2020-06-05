@@ -16,7 +16,6 @@ namespace UITests.Tests
             const string location = "Hürth";
             var locationPageObject = EnterLocation(location);
             var currentWeatherPage = (CurrentWeatherPageObject)locationPageObject.TapSearchButton();
-            Assert.True(currentWeatherPage.VerifyOnPage());
             Assert.True(currentWeatherPage.IsWeatherDataDisplayed(location));
         }
         
@@ -37,14 +36,12 @@ namespace UITests.Tests
         {
             var locationPageObject = new LocationPageObject(App);
             var currentWeatherPage = locationPageObject.TapCurrentWeatherTab();
-            Assert.True(currentWeatherPage.VerifyOnPage());
             Assert.False(currentWeatherPage.IsWeatherDataDisplayed(""));
         }
 
         private LocationPageObject EnterLocation(string location)
         {
             var locationPageObject = new LocationPageObject(App);
-            Assert.True(locationPageObject.VerifyOnPage());
             Assert.False(locationPageObject.IsSearchButtonEnabled());
             locationPageObject.EnterLocation(location);
             Assert.True(locationPageObject.IsSearchButtonEnabled());

@@ -12,6 +12,20 @@ namespace UITests.PageObjects
         {
         }
 
+        public override bool VerifyOnPage()
+        {
+            try
+            {
+                App.WaitForElement(_locationTab);
+                App.WaitForElement(_currentWeatherTab);
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
+
         public LocationPageObject TapLocationTab()
         {
             App.WaitForElement(_locationTab);
@@ -24,11 +38,6 @@ namespace UITests.PageObjects
             App.WaitForElement(_currentWeatherTab);
             App.Tap(_currentWeatherTab);
             return new CurrentWeatherPageObject(App);
-        }
-
-        public override bool VerifyOnPage()
-        {
-            throw new System.NotImplementedException();
         }
     }
     
