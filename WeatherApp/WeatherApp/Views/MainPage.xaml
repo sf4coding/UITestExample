@@ -10,9 +10,9 @@
     <TabbedPage.Children>
         <views:LocationPage Title="Location"
                             IconImageSource="Gps"
-                            AutomationId="{x:Static testIds:TestIds.LocationTab}" />
+                            AutomationId="{x:Static testIds:TestIds.WeatherLocationTab}" />
         <views:CurrentWeatherPage Title="Now"
                                   IconImageSource="Calendar"
-                                  AutomationId="{x:Static testIds:TestIds.CurrentWeatherTab}" />
+                                  AutomationId="{x:Static testIds:TestIds.WeatherCurrentWeatherTab}" />
     </TabbedPage.Children>
 </TabbedPage>

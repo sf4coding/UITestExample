@@ -28,14 +28,14 @@
             Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
             FontSize="Large" HorizontalTextAlignment="Center"
             Text="{Binding WeatherData.City}"
-            AutomationId="{x:Static testIds:TestIds.CurrentWeatherLocationDataLabel}" />
+            AutomationId="{x:Static testIds:TestIds.WeatherCurrentWeatherLocationDataLabel}" />
         <Label
             Grid.Row="1" Grid.Column="0"
             Text="Current Temperature:"/>
         <Label
             Grid.Row="1" Grid.Column="1"
             Text="{Binding WeatherData.CurrentTemperature, StringFormat={StaticResource FormatDegrees}}"
-            AutomationId="{x:Static testIds:TestIds.CurrentWeatherCurrentTemperatureDataLabel}" />
+            AutomationId="{x:Static testIds:TestIds.WeatherCurrentWeatherCurrentTemperatureDataLabel}" />
 
         <Label
             Grid.Row="2" Grid.Column="0"
@@ -43,7 +43,7 @@
         <Label
             Grid.Row="2" Grid.Column="1"
             Text="{Binding WeatherData.MinTemperature, StringFormat={StaticResource FormatDegrees}}"
-            AutomationId="{x:Static testIds:TestIds.CurrentWeatherMinTemperatureDataLabel}" />
+            AutomationId="{x:Static testIds:TestIds.WeatherCurrentWeatherMinTemperatureDataLabel}" />
 
         <Label
             Grid.Row="3" Grid.Column="0"
@@ -51,7 +51,7 @@
         <Label
             Grid.Row="3" Grid.Column="1"
             Text="{Binding WeatherData.MaxTemperature, StringFormat={StaticResource FormatDegrees}}"
-            AutomationId="{x:Static testIds:TestIds.CurrentWeatherMaxTemperatureDataLabel}" />
+            AutomationId="{x:Static testIds:TestIds.WeatherCurrentWeatherMaxTemperatureDataLabel}" />
 
         <Label
             Grid.Row="4" Grid.Column="0"
@@ -59,7 +59,7 @@
         <Label
             Grid.Row="4" Grid.Column="1"
             Text="{Binding WeatherData.Humidity, StringFormat={StaticResource FormatPercent}}"
-            AutomationId="{x:Static testIds:TestIds.CurrentWeatherHumidityDataLabel}" />
+            AutomationId="{x:Static testIds:TestIds.WeatherCurrentWeatherHumidityDataLabel}" />
     </Grid>
     
 </ContentPage>

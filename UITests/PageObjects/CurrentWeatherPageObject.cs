@@ -8,11 +8,11 @@ namespace UITests.PageObjects
 {
     public class CurrentWeatherPageObject : BaseWeatherAppPageObject
     {
-        private readonly Query _locationData = x => x.Marked(CurrentWeatherLocationDataLabel);
-        private readonly Query _currentTemperatureData = x => x.Marked(CurrentWeatherCurrentTemperatureDataLabel);
-        private readonly Query _maxTemperatureData = x => x.Marked(CurrentWeatherMaxTemperatureDataLabel);
-        private readonly Query _minTemperatureData = x => x.Marked(CurrentWeatherMinTemperatureDataLabel);
-        private readonly Query _humidityData = x => x.Marked(CurrentWeatherHumidityDataLabel);
+        private readonly Query _locationData = x => x.Marked(WeatherCurrentWeatherLocationDataLabel);
+        private readonly Query _currentTemperatureData = x => x.Marked(WeatherCurrentWeatherCurrentTemperatureDataLabel);
+        private readonly Query _maxTemperatureData = x => x.Marked(WeatherCurrentWeatherMaxTemperatureDataLabel);
+        private readonly Query _minTemperatureData = x => x.Marked(WeatherCurrentWeatherMinTemperatureDataLabel);
+        private readonly Query _humidityData = x => x.Marked(WeatherCurrentWeatherHumidityDataLabel);
         
         public CurrentWeatherPageObject(IApp app) : base(app)
         {

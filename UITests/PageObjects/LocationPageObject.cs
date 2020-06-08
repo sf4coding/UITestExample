@@ -8,9 +8,9 @@ namespace UITests.PageObjects
 {
     public class LocationPageObject : BaseWeatherAppPageObject
     {
-        private readonly Query _locationEntry = x => x.Marked(LocationLocationEntry);
-        private readonly Query _locationSearchButton = x => x.Marked(LocationSearchButton);
-        private readonly Query _locationLoadingCircle = x => x.Marked(LocationLoadingCircle);
+        private readonly Query _locationEntry = x => x.Marked(WeatherLocationLocationEntry);
+        private readonly Query _locationSearchButton = x => x.Marked(WeatherLocationSearchButton);
+        private readonly Query _locationLoadingCircle = x => x.Marked(WeatherLocationLoadingCircle);
         private readonly Query _dialogText = x => x.Text("This city does not exist.");
         private readonly Query _dialogButton = x => x.Text("OK");
 
