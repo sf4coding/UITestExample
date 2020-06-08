@@ -38,6 +38,19 @@ namespace UITests.Tests
             var currentWeatherPage = locationPageObject.TapCurrentWeatherTab();
             Assert.False(currentWeatherPage.IsWeatherDataDisplayed(""));
         }
+        
+        [Test]
+        public void SwipeToCurrentWeatherTabTest()
+        {
+            if (OniOS)
+            {
+                Assert.Ignore("Tabbed Page does not support swiping for iOS.");
+            }
+            
+            var locationPageObject = new LocationPageObject(App);
+            var currentWeatherPage = locationPageObject.SwipeToCurrentWeatherTab();
+            Assert.False(currentWeatherPage.IsWeatherDataDisplayed(""));
+        }
 
         private LocationPageObject EnterLocation(string location)
         {

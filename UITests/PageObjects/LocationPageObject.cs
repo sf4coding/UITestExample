@@ -78,5 +78,11 @@ namespace UITests.PageObjects
             App.Tap(_dialogButton);
             App.WaitForNoElement(_dialogButton);
         }
+
+        public CurrentWeatherPageObject SwipeToCurrentWeatherTab()
+        {
+            App.SwipeRightToLeft();
+            return new CurrentWeatherPageObject(App);
+        }
     }
 }

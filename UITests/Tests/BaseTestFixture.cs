@@ -10,6 +10,8 @@ namespace UITests.Tests
     public class BaseTestFixture
     {
         protected IApp App;
+        protected bool OnAndroid => _platform == Platform.Android;
+        protected bool OniOS => _platform == Platform.iOS;
         private readonly Platform _platform;
 
         public BaseTestFixture(Platform platform)
