@@ -8,3 +8,5 @@ I used the weather api OpenWeather in my project. In order to make the api calls
 
 Using OpenWeather is free (for everything I used here) and it does not take long to get the api key ;)
 
+Please make sure to click the link in the confirmation mail you get when you set up your OpenWeather account. Otherwise your API Keys will not work and you still get the error that your city does not exist.
+
