@@ -8,6 +8,8 @@ I used the weather api OpenWeather in my project. In order to make the api calls
 
 Using OpenWeather is free (for everything I used here) and it does not take long to get the api key ;)
 
+Please make sure to click the link in the confirmation mail you get when you set up your OpenWeather account. Otherwise your API Keys will not work and you still get the error that your city does not exist.
+
 ## UI Test Execution
 
 In order to be able to execute the UI Tests, you first must **build and install** the application using the UITest config. If you start a UI Test before that, the apk resp. app will not exist (you will get an exception). When the apk resp. app is created you can start the UI test on any emulator. It does not have to be installed to this emulator.
